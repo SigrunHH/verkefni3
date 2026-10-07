@@ -10,11 +10,17 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   grid-column: span 12;
   gap: 20px;
   width: 100%;
+}
+
+@media (width >= 500px) {
+  .card {
+    grid-column: span 12;
+  }
 }
 
 @media (width >= 700px) {
@@ -24,16 +30,13 @@
 }
 
 
-
-
 .card h2 {
-  flex: 1;
   font-size: 2rem;
 }
 
 .card .content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
